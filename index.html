@@ -1,19 +1,48 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-type="service" data-radius="soft" data-buttons="arrow" data-motion>
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lume Estética · Demo de atendimento com IA</title>
-    <meta name="description" content="Demonstração de uma assistente de IA que tira dúvidas, passa valores e agenda procedimentos para um espaço de estética fictício. Feito por Alan Souza." />
-    <meta property="og:title" content="Demo: assistente de IA para estética" />
-    <meta property="og:description" content="Tira dúvidas, consulta a agenda e marca consultas sozinha. Teste agora." />
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='16' fill='%236B2737'/><path d='M20 22c4-4 9-3 12 0 3-3 8-4 12 0 4 5 1 14-2 22-1 3-4 3-5 0l-2-7c-1-2-5-2-6 0l-2 7c-1 3-4 3-5 0-3-8-6-17-2-22z' fill='white'/></svg>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Lume Estética: clínica de estética facial e corporal em São Carlos</title>
+    <meta name="description" content="Demonstração de uma assistente de IA que passa valores, indica protocolos e marca horário para um espaço de estética fictício em São Carlos." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Lume Estética: clínica de estética facial e corporal em São Carlos" />
+    <meta property="og:description" content="Converse com a Lia, a assistente de IA que agenda horários de verdade nesta demonstração." />
+    <meta property="og:image" content="/share.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta name="theme-color" content="#f7f9fa" />
+    <meta name="site-kind" content="other" />
+    <meta name="page-type" content="service" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <meta name="color-scheme" content="light" />
-    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400;1,6..96,500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400..700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/system.css" />
+    <link rel="stylesheet" href="/assets/ui/cards.css" />
+    <link rel="stylesheet" href="/assets/motion/motion.css" />
+    <link rel="stylesheet" href="/assets/layout/layout.css" />
+    <link rel="stylesheet" href="/assets/moments/word-highlight/moment.css" />
+    <style>
+      :root {
+        --p-bg: #f7f9fa; --p-surface: #ecf0f2; --p-ink: #1f3038; --p-muted: #5d6b72;
+        --p-accent: #0d7480; --p-accent-ink: #ffffff; --p-action: #0d7480; --p-action-ink: #ffffff;
+        --p-inv-bg: #1f3038; --p-inv-surface: #2c3c44; --p-inv-ink: #f7f9fa; --p-inv-muted: #9ea7ab;
+        --p-inv-accent: #f7f9fa; --p-inv-accent-ink: #1f3038; --p-inv-action: #f7f9fa; --p-inv-action-ink: #1f3038;
+        --font-display: "Work Sans", system-ui, sans-serif;
+        --font-text: "Work Sans", system-ui, sans-serif;
+        --display-weight: 400;
+        --display-tracking: -0.025em;
+        --display-tracking-xl: -0.035em;
+      }
+    </style>
+    <script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
+    <script>document.documentElement.classList.add('mo-js');setTimeout(()=>document.documentElement.classList.add('mo-safe'),2500)</script>
   </head>
   <body>
+    <!-- type: service
+         deal: hero split, nav nav-mega, close close-type, footer footer-dark, rhythm space, buttons arrow, mark wordmark, grounds none
+         moments: word-highlight in #avaliacao
+         palette cool-white-slate, type work-sans, radius soft -->
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
