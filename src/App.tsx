@@ -1,5 +1,7 @@
 import { useEffect, useMemo } from 'react'
 import Chat from './Chat'
+import PainelPrevia, { type Previa } from './PainelPrevia'
+import { iniciarPolimento } from './polimento'
 import { CLINICA, horariosLivres } from '../shared/clinica'
 
 const s = (id: string) => CLINICA.servicos.find((x) => x.id === id)!
@@ -33,8 +35,11 @@ function proximoHorario() {
   return { dia, hora: String(Number(h.hora.slice(0, 2))) + 'h' }
 }
 
+const PREVIA: Previa = { painel: 'Painel da recepção', resumo: [['4', 'horários marcados fora do expediente'], ['1', 'conversa para a esteticista']], listaTitulo: 'Marcados pela Lia esta noite', itens: [['21:58', 'Camila R.', 'Limpeza de pele profunda', 'Qui 15h'], ['22:34', 'Fernanda L.', 'Drenagem linfática, pacote de 5', 'Sex 10h'], ['07:10', 'Beatriz A.', 'Avaliação facial', 'Sáb 9h']], pedidoTitulo: 'Para a equipe responder', pedido: ['Vermelhidão depois do peeling', 'Perguntou se é normal. A Lia não opinou e chamou a esteticista.'] }
+
 export default function App() {
   usarKit()
+  useEffect(() => iniciarPolimento(), [])
   const proximo = useMemo(proximoHorario, [])
 
   return (
@@ -210,9 +215,7 @@ export default function App() {
                 <div className="btn-row"><a className="btn btn--primary" href="https://wa.me/5519994450160?text=Oi%2C%20Alan%21%20Vi%20a%20demonstra%C3%A7%C3%A3o%20da%20Lia%20e%20quero%20uma%20assistente%20assim%20para%20a%20minha%20cl%C3%ADnica%20de%20est%C3%A9tica." target="_blank" rel="noreferrer">Quero uma Lia na minha clínica</a></div>
                 <p className="t-small muted">Fala direto com o Alan Souza, desenvolvedor de IA em São Carlos, pelo WhatsApp. <a className="link" href="https://alansouza.netlify.app" target="_blank" rel="noreferrer">Ver o portfólio</a></p>
               </div>
-              <div className="frame frame--photo frame--fill span-6 start-7">
-                <img className="frame__img" src="/img/massagem-facial.jpg" alt="Massagem facial com as pontas dos dedos" loading="lazy" />
-              </div>
+              <PainelPrevia p={PREVIA} />
             </div>
           </div>
         </section>
