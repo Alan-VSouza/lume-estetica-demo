@@ -207,8 +207,8 @@ export default function App() {
                   <li><span className="rows__name">Sua agenda de verdade</span><p>Reserva só horários livres e avisa a recepção de cada um.</p></li>
                   <li><span className="rows__name">Painel para a recepção</span><p>Horários marcados e pedidos de atendente num só lugar. <a className="link" href="/painel">Abrir o painel desta demo</a></p></li>
                 </ul>
-                <a className="link" href="https://alansouza.netlify.app" target="_blank" rel="noreferrer">Contratar uma assistente com o Alan</a>
-                <p className="t-small muted">Projeto de Alan Souza, desenvolvedor de IA em São Carlos.</p>
+                <div className="btn-row"><a className="btn btn--primary" href="https://wa.me/5519994450160?text=Oi%2C%20Alan%21%20Vi%20a%20demonstra%C3%A7%C3%A3o%20da%20Lia%20e%20quero%20uma%20assistente%20assim%20para%20a%20minha%20cl%C3%ADnica%20de%20est%C3%A9tica." target="_blank" rel="noreferrer">Quero uma Lia na minha clínica</a></div>
+                <p className="t-small muted">Fala direto com o Alan Souza, desenvolvedor de IA em São Carlos, pelo WhatsApp. <a className="link" href="https://alansouza.netlify.app" target="_blank" rel="noreferrer">Ver o portfólio</a></p>
               </div>
               <div className="frame frame--photo frame--fill span-6 start-7">
                 <img className="frame__img" src="/img/massagem-facial.jpg" alt="Massagem facial com as pontas dos dedos" loading="lazy" />
